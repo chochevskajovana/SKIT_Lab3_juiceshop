@@ -1,5 +1,5 @@
-export class ProductElements{
-    static get ElementsProduct(){
+export class ProductElementsNotInStock{
+    static get ElementNotInStock(){
         return {
             getBtnBasket: () =>  cy.get('[aria-label="Show the shopping cart"]'),
             getBtnSearch: () => cy.get('.mat-search_icon-search'),

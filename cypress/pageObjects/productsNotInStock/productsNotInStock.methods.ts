@@ -1,13 +1,13 @@
-import { ProductElements } from "./productsNotInStock.elements";
+import { ProductElementsNotInStock } from "./productsNotInStock.elements";
 
-export class ProductMethods{
+export class ProductMethodsNotInStock{
     addItemToBasket(item: string){
-        ProductElements.ElementsProduct.getBtnSearch().click();
-        ProductElements.ElementsProduct.getTxtSearch().type(item);
-        ProductElements.ElementsProduct.getTxtSearch().type('{enter}');
-        ProductElements.ElementsProduct.getBtnAddToBasket().click();
+        ProductElementsNotInStock.ElementNotInStock.getBtnSearch().click();
+        ProductElementsNotInStock.ElementNotInStock.getTxtSearch().type(item);
+        ProductElementsNotInStock.ElementNotInStock.getTxtSearch().type('{enter}');
+        ProductElementsNotInStock.ElementNotInStock.getBtnAddToBasket().click();
     }
     verifyItemAddedToBasket(numAdded: string){
-        ProductElements.ElementsProduct.getLblNotification().should('have.text', numAdded)
+        ProductElementsNotInStock.ElementNotInStock.getLblNotification().should('have.text', numAdded)
     }
 }
