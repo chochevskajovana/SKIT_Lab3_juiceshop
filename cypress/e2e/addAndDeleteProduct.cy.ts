@@ -11,7 +11,7 @@ describe('template spec', () => {
     login.verifySuccessfullLogin();
   })
 
-  it('User should be able to add item into basket', () => {
+  it('User should be able to add item into basket and delete the same item', () => {
     cy.get('[aria-label="Add to Basket"]').first().click();
     cy.get('.fa-3x.warn-notification').should('have.text', '1');
     cy.get('[aria-label="Show the shopping cart"]').click();
